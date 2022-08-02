@@ -1,5 +1,11 @@
 class DinosaursController < ApplicationController
+
+  def show
+    @dinosaur = Dinosaur.find(params[:id])
+  end
+  
   private
+  
   def set_dinosaur
     @dinosaur = Dinosaur.find(params[:id])
   end
