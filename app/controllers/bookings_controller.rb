@@ -1,14 +1,5 @@
 class BookingsController < ApplicationController
   # before_action :set_booking, only: ['new', 'show', 'edit', 'update', 'destroy' ]
-  # def booking
-  #   @dinosaur = Dinosaur.find(params[:id])
-  # end
-
-
-  # private
-  #   def booking_params
-  #     params.require(:booking).permit(:id, :date, :user_id)
-  #   end
 
     def new
       @bookings = Booking.new
