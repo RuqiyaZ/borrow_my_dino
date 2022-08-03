@@ -1,1 +1,9 @@
-<h1>Index</h1>
+<div class="container">
+
+    <h1>Index</h1>
+      <% @dinosaur.each do |dinosaur| %>
+          <h3><%= link_to dinosaur.name, dinosaur_path(dinosaur) %></h3>
+      <% end %>
+</div>
+
+ <h3><%= link_to "Add new Dino", new_dinosaur_path(@dinosaur), class: "btn btn-primary"%></h3>
