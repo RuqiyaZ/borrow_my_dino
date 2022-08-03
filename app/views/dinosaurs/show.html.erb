@@ -1,0 +1,9 @@
+<h1>Show page</h1>
+<div class="container">
+  <%= @dinosaur.name %>
+  <%= @dinosaur.description %>
+  <%= @dinosaur.age %>
+  <%= @dinosaur.origin %>
+
+  <h3><%= link_to "bookings", new_dinosaur_booking_path(@dinosaur), class: "btn btn-primary" %></h3>
+</div>
