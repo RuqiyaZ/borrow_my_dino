@@ -1,9 +1,22 @@
 <div class="container">
 
-    <h1>Index</h1>
-      <% @dinosaur.each do |dinosaur| %>
-          <h3><%= link_to dinosaur.name, dinosaur_path(dinosaur) %></h3>
+  <h1>BORROW MY DINO </h1>
+  <h2>Welcome to the Dino Hub</h2>
+
+  <%# PUT ITERATION INSIDE THE GRID %>
+  <div class="cards">
+    <% @dinosaur.each do |dinosaur| %>
+      <%# <h3>= link_to dinosaur.name, dinosaur_path(dinosaur)</h3> %>
+
+
+      <%= link_to dinosaur_path(dinosaur) do %>
+        <%# PUT CARD INSIDE HERE %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://cdn.shopify.com/s/files/1/0591/9493/files/t-rex-2730569_640_480x480.png?v=1625671646)">
+          <%= dinosaur.name %>
+        </div>
       <% end %>
+    <% end %>
+  </div>
 </div>
 
  <h3><%= link_to "Add new Dino", new_dinosaur_path(@dinosaur), class: "btn btn-primary"%></h3>
