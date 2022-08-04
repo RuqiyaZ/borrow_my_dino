@@ -20,6 +20,7 @@
           <li class="nav-item dropdown">
             <%= image_tag "avatar1", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Profile", "#", class: "dropdown-item" %>
               <%= link_to "Acount", "#", class: "dropdown-item" %>
               <%= link_to "My Bookings", "#", class: "dropdown-item" %>
               <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
