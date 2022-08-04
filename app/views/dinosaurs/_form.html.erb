@@ -1,0 +1,10 @@
+<h1>Form</h1>
+
+<%= form_with dinosaur: @dinosaur do |form| %>
+<div class="mb-3">
+<%= form.text_feld :name, class: "form-control" %>
+</div>
+<div class="mb-3">
+<%= form.text_feld :age, class: "form-control" %>
+</div>
+<%= end %>
