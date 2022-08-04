@@ -1,2 +1,44 @@
-<h1>Add NEW DINO PAGE</h1>
-<h2>Owners can add a new dino here</h2>
+<div class="container">
+  <h1>Add NEW DINO PAGE </h1>
+  <h2>Owners can add a new dino here</h2>
+
+  <%= form_with dinosaur: @dinosaur do |f| %>
+  <div class="mb-3">
+    <%= f.label :Dino_name  %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :Age  %>
+    <%= f.text_field :age, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :Diet  %>
+    <%= f.text_field :diet, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :Origin  %>
+    <%= f.text_field :origin, class: "form-control" %>
+  </div>
+
+  <div class="mb-3">
+    <%= f.label :Description  %>
+    <%= f.text_field :description, class: "form-control" %>
+  </div>
+
+  <h3>Upload a photo</h3>
+  <div class="input-group">
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile04">
+  </div>
+
+  <br>
+
+  <div class="container">
+    <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+
+  <% end %>
+</div>

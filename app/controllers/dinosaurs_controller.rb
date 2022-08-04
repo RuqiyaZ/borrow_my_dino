@@ -12,19 +12,26 @@ class DinosaursController < ApplicationController
   def show
   end
 
-  # def edit
-  # end
 
-  # def update
-  #   @dinosaur.update(dinosaur_params)
-  #   flash[notice:] = "Booking was successfully updated."
-  #   redirect_to dinosaurs_path(@dinosaur)
-  # end
+  def create
+    @dinosaur = Dinosaur.new()
+    @dinosaur.save
+    redirect_to dinosaurs_path(@dinosaur)
+  end
 
-  # def destroy
-  #   @dinosaur.destroy
-  #   redirect_to dinosaurs_path(@dinosaur)
-  # end
+  def edit
+  end
+
+  def update
+    @dinosaur.update(dinosaur_params)
+    flash[notice:] = "Booking was successfully updated."
+    redirect_to dinosaurs_path(@dinosaur)
+  end
+
+  def destroy
+    @dinosaur.destroy
+    redirect_to dinosaurs_path(@dinosaur)
+  end
 
   private
 
