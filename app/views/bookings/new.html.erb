@@ -1,7 +1,21 @@
-<h1>Booking New</h1>
-<h2>Request to book</h2>
-<h2>Choose how to pay</h2>
-<p>Request to book button that takes user to bookings confirmation page</p>
-<p>start date? end date? total price?</p>
+<div class="container">
+  <div class="row pt-1">
+    <div class="col m-2 bg-white">
+      <h1>New Booking</h1>
+      <h2>Image goes here</h2>
+    </div>
+    <div class="col m-2 bg-white">
+      <h2>Choose how to pay</h2>
+      <p>Request to book button that takes user to bookings confirmation page</p>
+      <p>start date? end date? total price?</p>
+      <label for="start_date"> Start Date </label>
+      <input type="date" id="start" name="start_date">
+      <label for="end_date"> End Date </label>
+      <input type="date" id="end" name="end_date">
 
-<%# <h3><%= link_to "Request to book", booking_path(@), class: "btn btn-primary" %></h3> %>
+    </div>
+  </div>
+</div>
+
+
+<%# <h3><%= link_to "Request to book", booking_path(@), class: "btn btn-primary" %>
