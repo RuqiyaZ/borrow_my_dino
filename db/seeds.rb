@@ -5,7 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+require "open-uri"
 
+puts "Destroying dinosaurs..."
+Dinosaur.destroy_all
 puts "Destroying Users..."
 User.destroy_all
 
@@ -24,11 +27,8 @@ puts "Welcoming users..."
     puts "User with email: #{user_data["email"]} successfully created!"
   end
 
-  
-puts "Destroying dinosaurs..."
-Dinosaur.destroy_all
-
 puts "Dinosaurs hatching..."
+
 dinosaurs = [
     {name: "Judith", description: "tyrannosaurus", age: 33, origin: "USA", diet: "carnivorous", user: User.all.sample},
     {name: "Samuel", description: "tyrannosaurus", age: 45, origin: "USA", diet: "carnivorous", user: User.all.sample},
@@ -49,13 +49,37 @@ dinosaurs = [
     {name: "Freddie", description: "microraptor", age: 26, origin: "China", diet: "carnivorous", user: User.all.sample},
     {name: "Noelia", description: "microraptor", age: 48, origin: "China", diet: "carnivorous", user: User.all.sample},
     {name: "Sarah", description: "spinosaurus", age: 32, origin: "Morocco", diet: "carnivorous", user: User.all.sample},
-    {name: "William", description: "spinosaurus", age: 54, origin: "Morocco", diet: "carnivorous", user: User.all.sample} 
+    {name: "William", description: "spinosaurus", age: 54, origin: "Morocco", diet: "carnivorous", user: User.all.sample}
 ]
 
-dinosaurs.each do |attributes|
-  dinosaur = Dinosaur.create!(attributes)
+dinosaur_images = ["https://lmg-labmanager.s3.amazonaws.com/assets/articleNo/27644/aImg/50255/tyrannosaurus-remains-hint-at-two-possible-species-distinct-from-t-rex-m.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg",
+                   "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/NES-Console-Set.jpg/1200px-NES-Console-Set.jpg"
+]
+
+dinosaurs.each_with_index do |attributes, index|
+  dinosaur = Dinosaur.new(attributes)
+  file = URI.open(dinosaur_images[index])
+  dinosaur.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
+  dinosaur.save
   puts "Created #{dinosaur.name}"
 end
+
 puts "Finished!"
-
-
