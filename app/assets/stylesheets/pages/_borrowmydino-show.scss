@@ -57,9 +57,192 @@
 }
 
 .header {
+
+  width: 100%;
   font-size: 100px;
 }
 
-.header2 {
+h2, h3 {
   font-size: 55px;
+}
+
+.headers{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1180px;
+}
+
+
+.dino-show-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dino-images {
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+  margin-bottom: 42px;
+  height: 447px;
+}
+
+.dino-image1 {
+  margin-right: 28px;
+}
+
+.dino-image1 figure {
+  width: 543px;
+  border-radius: 5px;
+  border: 2px solid #c1c1c1;
+  height: 100%;
+}
+
+.dino-image-multiple {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 10px;
+
+}
+.dino-image-multiple figure {
+  width: 249px;
+  height: calc((447px/2) - 15px);
+  border-radius: 5px;
+  border: 2px solid #c1c1c1;
+}
+
+
+.dino-img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+.dino-content{
+  display: flex;
+  width: 100%;
+  max-width: 1180px;
+  margin-bottom: 15px;
+}
+
+
+.description{
+  width: 60%;
+  margin-right: 25px;
+  padding: 10px;
+}
+
+.dino-info {
+  text-transform: capitalize;
+  font-weight: bolder;
+  font-size: 30px;
+}
+.dino-info2 {
+  text-transform: capitalize;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.dino-show-book{
+  border: 2px solid #c1c1c1;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 25px;
+}
+
+.date-period{
+  display: flex;
+  gap: 10px;
+  border: 2px solid #c1c1c1;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+
+.start-input{
+  border-right: 2px solid #c1c1c1;
+}
+
+.start-input label, .end-input label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.start-input input, .end-input input {
+  font-size: 16px;
+}
+
+.start-input, .end-input{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+input#start, input#end {
+  background: transparent;
+}
+
+.start-input input, .end-input input {
+  border: none;
+  box-sizing: border-box;
+  outline: 0;
+  position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+}
+
+.dino-show-book button {
+  width: 100%;
+  padding: 12px;
+  color: #ffffff;
+  background-color: #b4cb56;
+  border-color: #b4cb56;
+  margin-bottom: 20px;
+}
+
+.dino-show-book button:hover{
+  background-color: #94ab38;
+  border-color: #94ab38;
+}
+
+.dino-show-book button a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.dino-show-book hr{
+  border: 1px solid #c1c1c1;
+  opacity: inherit;
+}
+
+.book-total{
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.book-total p {
+  width: 50%;
+  padding: 5px;
+}
+
+.total-price{
+  display: flex;
+  justify-content: flex-end;
 }
