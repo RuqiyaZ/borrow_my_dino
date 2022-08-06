@@ -1,11 +1,62 @@
-<div class="headers">
-<h1 class="header">BORROW MY DINO</h1>
-<h2 class="header2">Your Dino</h2></div>
-<div class="container">
-  <%= @dinosaur.name %>
-  <%= @dinosaur.description %>
-  <%= @dinosaur.age %>
-  <%= @dinosaur.origin %>
-
-  <h3><%= link_to "bookings", new_dinosaur_booking_path(@dinosaur), class: "btn btn-primary" %></h3>
-</div>
+<main class="container d-flex vh-100 dino-show-main" >
+  <div class="headers">
+    <h1 class="header">BORROW MY DINO</h1>
+    <h2 class="header2">Your Dino</h2>
+  </div>
+  <div class="dino-images">
+    <div class="dino-image1">
+      <figure>
+        <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
+      </figure>
+    </div>
+    <div class="dino-image-multiple">
+      <figure>
+        <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
+      </figure>
+      <figure>
+        <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
+      </figure>
+    </div>
+    <div class="dino-image-multiple">
+      <figure>
+        <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
+      </figure>
+      <figure>
+        <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
+      </figure>
+    </div>
+  </div>
+  <div  class="dino-content">
+    <div class="description">
+      <p class="dino-info"><%= @dinosaur.name %></p>
+      <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      <p>
+    </div>
+    <div class="dino-show-book">
+      <h3>Book Now</h3>
+      <div class="datepicker date-period">
+        <div class="start-input">
+          <label for="start_date"> To </label>
+          <input type="date" id="start" name="start_date">
+        </div>
+        <div class="end-input">
+          <label for="end_date"> From </label>
+          <input type="date" id="end" name="end_date">
+        </div>
+      </div>
+      <button class="btn btn-primary">
+        <%= link_to "book", new_dinosaur_booking_path(@dinosaur) %>
+      </button>
+      <hr>
+      <div class="book-total">
+        <p><strong>Total:</strong></p>
+        <p class="total-price">£200</p>
+      </div>
+    </div>
+  </div>
+</main>
