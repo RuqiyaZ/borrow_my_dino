@@ -65,7 +65,7 @@
 
 .header2 {
   font-size: 70px;
-  color: #8da0b4;
+  color: black;
   // font-weight: bold;
   text-align: center;
   font-family: 'Londrina Shadow', cursive;
@@ -166,6 +166,7 @@ h2, h3 {
   object-fit: cover;
   object-position: center;
   height: 100%;
+  width: 100%;
 }
 
 .dino-content{
