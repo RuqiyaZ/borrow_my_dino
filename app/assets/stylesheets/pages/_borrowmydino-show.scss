@@ -63,6 +63,11 @@
   // padding-bottom: 80px;
 }
 
+.header-show {
+  font-size: 132px;
+  color: black;
+}
+
 .header2 {
   font-size: 70px;
   color: black;
@@ -71,6 +76,8 @@
   font-family: 'Londrina Shadow', cursive;
   padding-top: 30px;
   padding-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .banner {
@@ -87,8 +94,8 @@
 }
 
 .upload-button {
-  background: linear-gradient(90deg, #94704a, #af9680);
-  color: white;
+  background: linear-gradient(90deg, #DCE8E0,#D2D8D6);
+  color: grey;
   border-radius: 8px;
   margin-right: 10px;
   font-weight: 300;
