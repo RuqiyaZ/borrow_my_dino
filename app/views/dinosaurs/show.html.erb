@@ -1,12 +1,11 @@
 <main class="container d-flex vh-100 dino-show-main" >
   <div class="headers">
-    <h1 class="header-show">BORROW MY DINO</h1>
-    <h2 class="header2">Your Dino</h2>
+    <h2 class="header2"><%= @dinosaur.name %></h2>
   </div>
   <div class="dino-images">
     <div class="dino-image1">
       <figure>
-        <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
+        <%= cl_image_tag @dinosaur.photo.key, class: "dino-img" %>
       </figure>
     </div>
     <div class="dino-image-multiple">
@@ -28,7 +27,6 @@
   </div>
   <div  class="dino-content">
     <div class="description">
-      <p class="dino-info"><%= @dinosaur.name %></p>
       <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
