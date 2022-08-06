@@ -44,22 +44,67 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  font-family: 'Londrina Solid', cursive;
 }
 
 .header {
-  font-size: 100px;
+  font-size: 132px;
+  color: white;
+  // padding-bottom: 80px;
 }
 
 .header2 {
-  font-size: 55px;
+  font-size: 70px;
+  color: #8da0b4;
+  // font-weight: bold;
+  text-align: center;
+  font-family: 'Londrina Shadow', cursive;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.slogan {
+  font-size: 40px;
+  color: white;
+  font-family: 'Londrina Solid', cursive;
+}
+
+.upload-button {
+  background: linear-gradient(90deg, #94704a, #af9680);
+  color: white;
+  border-radius: 8px;
+  margin-right: 10px;
+  font-weight: 300;
+}
+
+// .banner h1 {
+//   margin: 0;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   font-size: 32px;
+//   font-weight: bold;
+// }
+
+// .banner p {
+//   font-size: 20px;
+//   color: white;
+//   opacity: .7;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// }
