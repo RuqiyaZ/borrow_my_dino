@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+    <%= link_to "root_path", class: "navbar-brand" do %>
       <%= image_tag "BMDlogo.png" %>
     <% end %>
 
@@ -21,9 +21,8 @@
             <%= image_tag "avatar1", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Profile", "#", class: "dropdown-item" %>
-              <%= link_to "Acount", "#", class: "dropdown-item" %>
               <%= link_to "My Bookings", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", "#", class: "dropdown-item", data: {turbo_method: :delete} %>
+              <%= link_to "Log out", "root_path", class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
           </li>
         <% else %>
