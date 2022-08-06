@@ -18,6 +18,7 @@ puts "Welcoming users..."
     { email: 'yulin@me.com', password: 'P@ssword1' },
     { email: 'ruqiya@me.com', password: 'P@ssword1' },
     { email: 'tristan@me.com', password: 'P@ssword1' },
+    { email: 'lucy@me.com', password: 'P@ssword1' },
     { email: 'elizabeth@me.com', password: 'P@ssword1' }
   ].each do |user_data| # Iterate over each set of user data...
     # ...create a user with each set of data...
