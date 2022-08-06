@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
     def new
       @bookings = Booking.new
+      set_dinosaur
     end
 
     def create
@@ -36,7 +37,7 @@ class BookingsController < ApplicationController
     # end
 
     def set_dinosaur
-      @dinosaur = Dinosaur.find(params[:id])
+      @dinosaur = Dinosaur.find(params[:dinosaur_id])
     end
 
     def booking_params
