@@ -1,0 +1,40 @@
+// .dino-box {
+//   display: flex;
+//   justify-content: center;
+//   background-color: black;
+// }
+.form-control {
+  background-color: white;
+  width: 150%;
+}
+
+.dino-box {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+form {
+  border: 10px;
+}
+
+// .photo-and-submit-box {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .border-file {
+//   border: black;
+// }
+
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: sans-serif;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+}
