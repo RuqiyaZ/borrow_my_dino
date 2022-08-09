@@ -32,8 +32,6 @@ puts "Dinosaurs hatching..."
 
 dinosaurs = [
     {name: "Judith", description: "tyrannosaurus", age: 33, origin: "USA", diet: "carnivorous", user: User.all.sample},
-    {name: "Samuel", description: "tyrannosaurus", age: 45, origin: "USA", diet: "carnivorous", user: User.all.sample},
-    {name: "Jake", description: "tyrannosaurus", age: 28, origin: "USA", diet: "carnivorous", user: User.all.sample},
     {name: "Elle", description: "tyrannosaurus", age: 66, origin: "USA", diet: "carnivorous", user: User.all.sample},
     {name: "Carmen", description: "velociraptor", age: 22, origin: "Mongolia", diet: "carnivorous", user: User.all.sample},
     {name: "Sidney", description: "velociraptor", age: 45, origin: "Mongolia", diet: "carnivorous", user: User.all.sample},
@@ -44,18 +42,15 @@ dinosaurs = [
     {name: "Edward", description: "iguanodon", age: 63, origin: "UK", diet: "herbivorous", user: User.all.sample},
     {name: "Olivia", description: "iguanodon", age: 22, origin: "UK", diet: "herbivorous", user: User.all.sample},
     {name: "Frank", description: "struthiomimus", age: 27, origin: "Canada", diet: "omnivorous", user: User.all.sample},
-    {name: "Dolly", description: "struthiomimus", age: 39, origin: "Canada", diet: "omnivorous", user: User.all.sample},
-    {name: "Chloe", description: "struthiomimus", age: 44, origin: "Canada", diet: "omnivorous", user: User.all.sample},
-    {name: "Jonesy", description: "struthiomimus", age: 30, origin: "Canada", diet: "omnivorous", user: User.all.sample},
-    {name: "Freddie", description: "microraptor", age: 26, origin: "China", diet: "carnivorous", user: User.all.sample},
-    {name: "Noelia", description: "microraptor", age: 48, origin: "China", diet: "carnivorous", user: User.all.sample},
-    {name: "Sarah", description: "spinosaurus", age: 32, origin: "Morocco", diet: "carnivorous", user: User.all.sample},
-    {name: "William", description: "spinosaurus", age: 54, origin: "Morocco", diet: "carnivorous", user: User.all.sample}
+    {name: "Dolly", description: "struthiomimus", age: 39, origin: "Canada", diet: "omnivorous", user: User.all.sample}
+    # {name: "Chloe", description: "struthiomimus", age: 44, origin: "Canada", diet: "omnivorous", user: User.all.sample},
+    # {name: "Jonesy", description: "struthiomimus", age: 30, origin: "Canada", diet: "omnivorous", user: User.all.sample},
+    # {name: "Noelia", description: "microraptor", age: 48, origin: "China", diet: "carnivorous", user: User.all.sample},
+    # {name: "Sarah", description: "spinosaurus", age: 32, origin: "Morocco", diet: "carnivorous", user: User.all.sample},
+    # {name: "William", description: "spinosaurus", age: 54, origin: "Morocco", diet: "carnivorous", user: User.all.sample}
 ]
 
 dinosaur_images = ["https://lmg-labmanager.s3.amazonaws.com/assets/articleNo/27644/aImg/50255/tyrannosaurus-remains-hint-at-two-possible-species-distinct-from-t-rex-m.jpg",
-                   "https://images.dinosaurpictures.org/tyrannosaurus_889a.jpg",
-                   "https://render.fineartamerica.com/images/images-profile-flow/400/images-medium-large-5/tyrannosaurus-rex-dinosaur-julius-t-csotonyiscience-photo-library.jpg",
                    "https://bbts1.azureedge.net/images/p/full/2020/04/af143f14-8a9c-4676-92c9-65421e9d67c4.jpg",
                    "https://a-z-animals.com/media/2022/05/shutterstock_1448616338-1024x614.jpg",
                    "https://abcdino.com/wp-content/uploads/2020/07/Velociraptor-running.jpg",
@@ -69,7 +64,6 @@ dinosaur_images = ["https://lmg-labmanager.s3.amazonaws.com/assets/articleNo/276
                    "https://i.pinimg.com/736x/e7/e3/41/e7e341dbc333c50d626595f04eae2e9d.jpg",
                    "https://images.cults3d.com/S1UtOGou_vuq77Q1M2Wmo9_oaQU=/516x516/https://files.cults3d.com/uploaders/18032423/illustration-file/dd94b279-d16f-48f6-8f97-5cd6427fbd82/1.png",
                    "https://64.media.tumblr.com/ae25fab178d3d2e570d55aa1175c3cd3/1efc64ddc57fdfa0-c2/s540x810/93c00bff55f55826f0643b7c9c97f0b0a1afd246.pnj",
-                   "https://cdn.shopify.com/s/files/1/0266/5817/7121/files/2_371e6081-c68c-4cba-9345-857d8886a6ae_1024x1024.jpg?v=1643440275",
                    "https://static.wikia.nocookie.net/pkgame/images/6/61/Microraptor_2.png/revision/latest?cb=20210508214807",
                    "https://blog.paultonspark.co.uk/app/uploads/2022/04/Spinosaurus-had-straight-teeth-and-a-sail-on-its-back.jpg",
                    "https://bbts1.azureedge.net/images/p/full/2020/10/11105c2f-de6c-4e21-8150-fc270a0191bd.jpg"
