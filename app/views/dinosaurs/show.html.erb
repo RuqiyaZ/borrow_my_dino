@@ -1,14 +1,15 @@
-<main class="container d-flex vh-100 dino-show-main" >
+<main class="container d-flex dino-show-main" >
   <div class="headers">
     <h2 class="header2 justify-content-center"><%= @dinosaur.name %></h2>
   </div>
+  <div class="d-inline-flex">
   <div class="dino-images">
     <div class="dino-image1">
       <figure>
         <%= cl_image_tag @dinosaur.photo.key, class: "dino-img" %>
       </figure>
     </div>
-    <div class="dino-image-multiple">
+    <%# <div class="dino-image-multiple">
       <figure>
         <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
       </figure>
@@ -23,18 +24,8 @@
       <figure>
         <img class="dino-img" src="https://www.nicepng.com/png/detail/18-180386_dinosaur-png-transparent-picture-t-rex-transparent-background.png">
       </figure>
-    </div>
+    </div> %>
   </div>
-  <div  class="dino-content">
-    <div class="description">
-      <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-      <p>
-    </div>
     <div class="dino-show-book">
       <h3>Book Now</h3>
       <div class="datepicker date-period">
@@ -57,4 +48,15 @@
       </div>
     </div>
   </div>
+   </div>
+  <div  class="dino-content">
+    <div class="description">
+      <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+      <p>
+    </div>
 </main>
