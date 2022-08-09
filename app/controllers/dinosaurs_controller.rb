@@ -1,22 +1,27 @@
 class DinosaursController < ApplicationController
-  before_action :set_dinosaur, only: ['show']
+  before_action :set_dinosaur, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   def new
-    @dinosaurs = Dinosaur.new
+    @dinosaur = Dinosaur.new
   end
 
   def index
-    @dinosaur = Dinosaur.all
+    #should be dinosaur(s) that was errorring
+    @dinosaurs = Dinosaur.all
   end
 
   def show
   end
 
-
   def create
-    @dinosaur = Dinosaur.new()
-    @dinosaur.save
-    redirect_to dinosaurs_path(@dinosaur)
+    @dinosaur = Dinosaur.new(dinosaur_params)
+    @dinosaur.user = current_user
+    if @dinosaur.save!
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -30,7 +35,7 @@ class DinosaursController < ApplicationController
 
   def destroy
     @dinosaur.destroy
-    redirect_to dinosaurs_path(@dinosaur)
+    redirect_to root_path
   end
 
   private
@@ -41,5 +46,13 @@ class DinosaursController < ApplicationController
 
   def dinosaur_params
     params.require(:dinosaur).permit(:name, :description, :age, :diet, :origin, :photo)
+  end
+
+  def authenticate_user!
+    if user_signed_in?
+      super
+    else
+      redirect_to new_user_session_path , notice: "Please Login to view that page!"
+    end
   end
 end
