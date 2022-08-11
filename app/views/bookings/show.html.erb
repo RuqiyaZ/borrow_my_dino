@@ -1,4 +1,20 @@
 <div class="container">
-<h1>Bookings show page</h1>
-<h2>Bookings confirmed page?</h2>
+  <div class="row pt-1">
+    <div class="col m-2 pb-2 bg-white">
+      <h1>Your Booking has been confirmed</h1>
+      <div class="card">
+        <%= cl_image_tag @dinosaur.photo.key, class: "dino-img" %>
+        <div class="card-body">
+          <h2 class="card-title"><%= @dinosaur.name %></h5>
+          <h4> Your Dinosaur was booked between: <%= @booking.start_date %> and <%= @booking.end_date %>
+        </div>
+      </div>
+    </div>
+    <div class="col m-2 pb-2 bg-white">
+      <h3>Your booking Details:</h3>
+      <h4>Booking created at: <%= @booking.created_at %> </h4>
+      <h4>Total Paid: <%= @booking.total_price %> </h4>
+      <h4> Thank you for choosing BOOKADINO! </h4>
+    </div>
+  </div>
 </div>
