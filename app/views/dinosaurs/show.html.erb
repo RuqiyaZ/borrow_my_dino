@@ -29,7 +29,7 @@
     <div class="dino-show-book">
       <h3 class="text-center">Book Now</h3>
       <div class="">
-        <div class="datepicker date-period">
+        <%# <div class="datepicker date-period">
           <div class="start-input">
             <label for="start_date"> To </label>
             <input type="date" id="start" name="start_date">
@@ -38,7 +38,7 @@
             <label for="end_date"> From </label>
             <input type="date" id="end" name="end_date">
           </div>
-        </div>
+        </div> %>
         <button class="btn btn-primary">
           <%= link_to "reserve", new_dinosaur_booking_path(@dinosaur) %>
         </button>
