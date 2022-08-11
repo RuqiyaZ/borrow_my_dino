@@ -47,7 +47,7 @@
         <hr>
         <div class="book-total">
           <p><strong>Total:</strong></p>
-          <p class="total-price">£200</p>
+          <p class="total-price"> £<%= @dinosaur.daily_rate %></p>
         </div>
       </div>
     </div>
@@ -57,10 +57,7 @@
     <div class="description">
       <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+       <%= @dinosaur.bio %>
       <p>
     </div>
 </main>
