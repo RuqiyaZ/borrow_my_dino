@@ -1,0 +1,10 @@
+<h1>edit <%= @dinosaur.name %></h1>
+<%= simple_form_for @dinosaur do |f| %>
+  <%= f.input :name %>
+  <%= f.input :age %>
+  <%= f.input :diet %>
+  <%= f.input :origin %>
+  <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Update Dino", class: "btn btn-primary" %>
+<% end %>

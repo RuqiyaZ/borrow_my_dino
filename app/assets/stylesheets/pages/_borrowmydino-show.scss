@@ -218,6 +218,10 @@ h2, h3 {
   // height: 100%;
 }
 
+.bookings-container{
+  height: calc(100vh - 167px);
+}
+
 .date-period{
   display: flex;
   gap: 10px;
@@ -309,4 +313,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .total-price{
   display: flex;
   justify-content: flex-end;
+}
+
+.destroy {
+  display: flex;
+  align-items: center;
 }

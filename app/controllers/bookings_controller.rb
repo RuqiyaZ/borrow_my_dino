@@ -16,6 +16,8 @@ class BookingsController < ApplicationController
     end
 
     def show
+      find_booking
+      @dinosaur = @booking.dinosaur
     end
 
     def edit
@@ -40,6 +42,10 @@ class BookingsController < ApplicationController
 
     def find_dinosaur
       @dinosaur = Dinosaur.find(params[:dinosaur_id])
+    end
+
+    def find_booking
+      @booking = Booking.find(params[:id])
     end
 
     def booking_params

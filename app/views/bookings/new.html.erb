@@ -1,4 +1,4 @@
-<div class="container">
+<div class="bookings-container container">
   <div class="row pt-1">
     <div class="col m-2 pb-2 bg-white">
       <h1>Booking Summary</h1>
@@ -13,13 +13,15 @@
     <div class="col m-2 pb-2 bg-white text-center">
       <h2 class="p-2">Pay Now</h2>
         <%= simple_form_for [@dinosaur,@booking] do |form| %>
-          <%= form.input :start_date, html5:true %>
-          <%= form.input :end_date, html5:true %>
-          <%= form.button :submit, class: "btn btn-primary" %>
+          <%= form.label :start_date %>
+          <%= form.date_field :start_date, class: "form-control" %>
+          <%= form.label :end_date %>
+          <%= form.date_field :end_date, class: "form-control" %>
+          <%= form.button :submit, "Book Now", class: "btn btn-primary btn-lg" %>
         <% end %>
     </div>
   </div>
 </div>
 
 
-<%# <h3><%= link_to "Request to book", booking_path(@), class: "btn btn-primary" %>
+<%# <h3><%= link_to "Request to book", booking_path(@), class: "btn btn-primary btn-lg" %>

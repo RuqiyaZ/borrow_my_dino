@@ -44,4 +44,14 @@
       </div>
     </div>
   </div>
+   </div>
+  <div class="dino-content">
+    <div class="destroy">
+      <% if current_user.present? && @dinosaur.user_id == current_user.id %>
+        <%= link_to "Edit Dino", edit_dinosaur_path(@dinosaur), class: "btn btn-primary edit" %>
+        <%= button_to "Delete Dino", @dinosaur, method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } } , class: "btn btn-danger, delete" %>
+      <% else %>
+      <% end %>
+    </div>
+   </div>
 </main>
