@@ -309,3 +309,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   justify-content: flex-end;
 }
+
+.destroy {
+  display: flex;
+  align-items: center;
+}
