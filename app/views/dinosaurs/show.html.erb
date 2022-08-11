@@ -28,46 +28,20 @@
       </div> %>
     </div>
     <div class="dino-show-book">
-      <div  class="dino-content">
-        <div class="description">
-          <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<p>
-      <h3 class="text-center">Book Now</h3>
-      <div class="">
-        <%# <div class="datepicker date-period">
-          <div class="start-input">
-            <label for="start_date"> To </label>
-            <input type="date" id="start" name="start_date">
-          </div>
-          <div class="end-input">
-            <label for="end_date"> From </label>
-            <input type="date" id="end" name="end_date">
-          </div>
-        </div> %>
-        <button class="btn btn-primary">
-          <%= link_to "reserve", new_dinosaur_booking_path(@dinosaur) %>
-        </button>
+     <div class="dino-content">
+      <div class="description">
+        <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
+        <p><%= @dinosaur.bio %><p>
       </div>
       <div class="">
-        <hr>
         <div class="book-total">
-          <p><strong>Total:</strong></p>
+          <p><strong>Daily Rate:</strong></p>
           <p class="total-price"> £<%= @dinosaur.daily_rate %></p>
         </div>
+        <button class="btn btn-primary">
+          <%= link_to "Reserve Dino", new_dinosaur_booking_path(@dinosaur), class: "slogan" %>
+        </button>
       </div>
     </div>
   </div>
-  <button class="btn btn-primary btn-block">
-    <%= link_to "reserve", new_dinosaur_booking_path(@dinosaur) %>
-    <h3 class="slogan">Reserve Dino</h3>
-  </button>
-   </div>
-  <div  class="dino-content">
-    <div class="description">
-      <p class="dino-info2"> <%= @dinosaur.description %>, <%= @dinosaur.age %>, from <%= @dinosaur.origin %> </p>
-      <p>
-       <%= @dinosaur.bio %>
-      <p>
-    </div>
 </main>

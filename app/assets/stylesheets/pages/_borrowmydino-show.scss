@@ -179,6 +179,8 @@ h2, h3 {
 
 .dino-content{
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   max-width: 1180px;
   margin-bottom: 15px;
@@ -186,10 +188,10 @@ h2, h3 {
 
 
 .description{
-  width: 60%;
-  margin-right: 25px;
+  width: 100%;
   padding: 10px 10px 10px;
-
+  font-family: 'Londrina Solid', cursive;
+  font-size: 18px;
 }
 
 .dino-info {
@@ -207,7 +209,7 @@ h2, h3 {
   border: 2px solid #c1c1c1;
   border-radius: 5px;
   // padding: 15px;
-  padding-top: 5px;
+  padding: 16px;
   margin-left: 25px;
   display: flex;
   flex-direction: column;
@@ -302,8 +304,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .book-total p {
   width: 50%;
-  padding: 5px;
-  margin: 0;
 }
 
 .total-price{
