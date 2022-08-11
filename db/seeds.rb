@@ -31,18 +31,18 @@ puts "Welcoming users..."
 puts "Dinosaurs hatching..."
 
 dinosaurs = [
-    {name: "Judith", description: "tyrannosaurus", age: 33, origin: "USA", diet: "carnivorous", user: User.all.sample},
-    {name: "Elle", description: "tyrannosaurus", age: 66, origin: "USA", diet: "carnivorous", user: User.all.sample},
-    {name: "Carmen", description: "velociraptor", age: 22, origin: "Mongolia", diet: "carnivorous", user: User.all.sample},
-    {name: "Sidney", description: "velociraptor", age: 45, origin: "Mongolia", diet: "carnivorous", user: User.all.sample},
-    {name: "Duke", description: "brachiosaurus", age: 55, origin: "USA", diet: "herbivorous", user: User.all.sample},
-    {name: "Soph", description: "brachiosaurus", age: 60, origin: "USA", diet: "herbivorous", user: User.all.sample},
-    {name: "Amanda", description: "stegosaurus", age: 62, origin: "USA", diet: "herbivorous", user: User.all.sample},
-    {name: "Ollie", description: "triceratops", age: 29, origin: "USA", diet: "herbivorous", user: User.all.sample},
-    {name: "Edward", description: "iguanodon", age: 63, origin: "UK", diet: "herbivorous", user: User.all.sample},
-    {name: "Olivia", description: "iguanodon", age: 22, origin: "UK", diet: "herbivorous", user: User.all.sample},
-    {name: "Frank", description: "struthiomimus", age: 27, origin: "Canada", diet: "omnivorous", user: User.all.sample},
-    {name: "Dolly", description: "struthiomimus", age: 39, origin: "Canada", diet: "omnivorous", user: User.all.sample}
+    {name: "Judith", description: "tyrannosaurus", age: 33, origin: "Brazil", bio: "The friendliest T-Rex in town, Judith loves soaking up the sunshine in St. James's Park and eating frozen ice bones. Great with people but loves to play pranks!", diet: "carnivorous", daily_rate: 100, user: User.all.sample},
+    {name: "Elle", description: "tyrannosaurus", age: 66, origin: "Barbados", bio: "Elle can be a but grumpy initially but soon warms up with some tasty snacks. Not a fan of children but absolutely loves dogs - she makes an excellent security guard.", diet: "carnivorous", daily_rate: 80, user: User.all.sample},
+    {name: "Carmen", description: "velociraptor", age: 22, origin: "Jamaica", bio: "Carmen is sharp, speedy and efficient - brilliant for a quick errand or some DIY. Favourite treats include wagyu and salmon.", diet: "carnivorous", daily_rate: 110, user: User.all.sample},
+    {name: "Sidney", description: "velociraptor", age: 45, origin: "France", bio: "Sidney is a fantastic property guard, expert at keeping unwanted visitors away.", diet: "carnivorous", daily_rate: 110, user: User.all.sample},
+    {name: "Duke", description: "brachiosaurus", age: 55, origin: "Netherlands", bio: "Duke is a phenomenal gardener - expert tree surgeon, he regularly works in Kew Gardens on the older trees", diet: "herbivorous", daily_rate: 160, user: User.all.sample},
+    {name: "Soph", description: "brachiosaurus", age: 60, origin: "Ghana", bio: "Soph is a 5* performer, she's been in every Jurassic Park movie and is excellent at parties. Adores classical music.", diet: "herbivorous", daily_rate: 1500, user: User.all.sample},
+    {name: "Amanda", description: "stegosaurus", age: 62, origin: "Australia", bio: "Need anything demolishing or moving? Amanda is a skilled at big jobs. Super friendly and loves frozen watermelon", diet: "herbivorous", daily_rate: 300, user: User.all.sample},
+    {name: "Ollie", description: "triceratops", age: 29, origin: "Spain", bio: "Ollie is a big softie, super goofy and the life of the party! Brings fun to any social event. Book Ollie for your next party and it will be one to remember! Vegan", diet: "herbivorous", daily_rate: 150, user: User.all.sample},
+    {name: "Edward", description: "iguanodon", age: 63, origin: "UK", bio: "Edward is lovely companion - great for helping with errands, particularly gentle with children and mature adults. Loves Earl Grey tea and cucumber sandwiches. Very handy in the garden too!", diet: "herbivorous", daily_rate: 75, user: User.all.sample},
+    {name: "Olivia", description: "iguanodon", age: 22, origin: "UK", bio: "Need a babysitter? Olivia is incredible with children and pets. Very experienced house sitter.", diet: "herbivorous", daily_rate: 80, user: User.all.sample},
+    {name: "Frank", description: "struthiomimus", age: 27, origin: "Canada", bio: "Frank is the fastest delivery dino around, he's never been late for a deadline and charms everyone he meets. Need something fast? Book Frank", diet: "omnivorous", daily_rate: 95, user: User.all.sample},
+    {name: "Dolly", description: "struthiomimus", age: 39, origin: "Ireland", bio: "Dolly is a professional and considerate alternative method of transport. She is very courteous, timely and really mindful of passengers and other drivers on the road. Loves Coldplay and fresh pasta.", diet: "omnivorous", daily_rate: 95, user: User.all.sample}
     # {name: "Chloe", description: "struthiomimus", age: 44, origin: "Canada", diet: "omnivorous", user: User.all.sample},
     # {name: "Jonesy", description: "struthiomimus", age: 30, origin: "Canada", diet: "omnivorous", user: User.all.sample},
     # {name: "Noelia", description: "microraptor", age: 48, origin: "China", diet: "carnivorous", user: User.all.sample},
