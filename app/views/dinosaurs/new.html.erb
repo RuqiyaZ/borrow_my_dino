@@ -1,9 +1,12 @@
-<%= simple_form_for @dinosaur do |f| %>
-  <%= f.input :name %>
-  <%= f.input :age %>
-  <%= f.input :diet %>
-  <%= f.input :origin %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit Dino", class: "btn btn-primary" %>
-<% end %>
+<div class="container new-dinosaur-container">
+  <h2 class="header2 justify-content-center">Add a new dino</h2>
+  <%= simple_form_for @dinosaur do |f| %>
+    <%= f.input :name %>
+    <%= f.input :age %>
+    <%= f.input :diet %>
+    <%= f.input :origin %>
+    <%= f.input :description %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Submit Dino", class: "btn btn-primary slogan" %>
+  <% end %>
+</div>
