@@ -27,24 +27,28 @@
     </div> %>
   </div>
     <div class="dino-show-book">
-      <h3>Book Now</h3>
-      <div class="datepicker date-period">
-        <div class="start-input">
-          <label for="start_date"> To </label>
-          <input type="date" id="start" name="start_date">
+      <h3 class="text-center">Book Now</h3>
+      <div class="">
+        <div class="datepicker date-period">
+          <div class="start-input">
+            <label for="start_date"> To </label>
+            <input type="date" id="start" name="start_date">
+          </div>
+          <div class="end-input">
+            <label for="end_date"> From </label>
+            <input type="date" id="end" name="end_date">
+          </div>
         </div>
-        <div class="end-input">
-          <label for="end_date"> From </label>
-          <input type="date" id="end" name="end_date">
-        </div>
+        <button class="btn btn-primary">
+          <%= link_to "reserve", new_dinosaur_booking_path(@dinosaur) %>
+        </button>
       </div>
-      <button class="btn btn-primary">
-        <%= link_to "reserve", new_dinosaur_booking_path(@dinosaur) %>
-      </button>
-      <hr>
-      <div class="book-total">
-        <p><strong>Total:</strong></p>
-        <p class="total-price">£200</p>
+      <div class="">
+        <hr>
+        <div class="book-total">
+          <p><strong>Total:</strong></p>
+          <p class="total-price">£200</p>
+        </div>
       </div>
     </div>
   </div>
