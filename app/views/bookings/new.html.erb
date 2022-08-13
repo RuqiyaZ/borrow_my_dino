@@ -13,10 +13,9 @@
     <div class="col m-2 pb-2 bg-white text-center">
       <h2 class="p-2">Pay Now</h2>
         <%= simple_form_for [@dinosaur,@booking] do |form| %>
-          <%= form.label :start_date %>
-          <%= form.date_field :start_date, class: "form-control" %>
-          <%= form.label :end_date %>
-          <%= form.date_field :end_date, class: "form-control" %>
+          <%= form.input :start_date, class: "form-control" %>
+          <%= form.input :end_date, class: "form-control" %>
+          <h3>Total to Pay: £<%= @dinosaur.daily_rate %> </h3>
           <%= form.button :submit, "Book Now", class: "btn btn-primary btn-lg" %>
         <% end %>
     </div>
