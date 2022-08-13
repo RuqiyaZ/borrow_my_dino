@@ -191,7 +191,9 @@ h2, h3 {
   width: 100%;
   padding: 10px 10px 10px;
   font-family: 'Londrina Solid', cursive;
+  font-weight: lighter;
   font-size: 18px;
+  text-align: center;
 }
 
 .dino-info {
@@ -318,4 +320,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .destroy {
   display: flex;
   align-items: center;
+}
+
+.delete {
+  background-color: red;
 }
