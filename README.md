@@ -1,1 +1,8 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+# Borrow My Dino
+## About
+
+Built with Ruby on Rails, Borrow My Dino is a dinosaur rental service :t-rex:
+
+## Next phase
+- Messaging tool
+- User / owner reviews
